@@ -8,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatListModule } from '@angular/material/list';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MatListModule } from '@angular/material/list';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MatListModule
+    MatListModule,
+    RouterModule
   ],
   exports:[
     ToolbarComponent,
@@ -30,7 +32,8 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MenuComponent,
     MatMenuModule,
-    MatListModule
+    MatListModule,
+    RouterModule
   ]
 })
 export class SharedModule { }

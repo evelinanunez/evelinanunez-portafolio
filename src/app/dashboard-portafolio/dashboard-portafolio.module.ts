@@ -4,6 +4,7 @@ import { DashboardPortafolioComponent } from './dashboard-portafolio.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { DashboardPortafolioRoutingModule } from './dashboard-portafolio-routing.module';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    //RouterModule,
+    DashboardPortafolioRoutingModule
   ]
 })
 export class DashboardPortafolioModule { }
