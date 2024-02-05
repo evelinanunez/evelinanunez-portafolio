@@ -9,4 +9,21 @@
 mat-nav-list.list-horizontal {
   display: flex;
   flex-direction: row;
+  margin-left: 8px;
+  min-width: 150px;
+  font-size: 25px;
+color: #fff;
  }
+
+ mat-list-item a {
+  display: inline-block; /* Asegura que el enlace ocupe toda la anchura del contenedor */
+}
+
+mat-list-item{
+  width: auto;
+  color: #fff;
+}
+
+mat-list-item a{
+  color: #fff;
+}

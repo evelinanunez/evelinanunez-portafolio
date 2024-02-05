@@ -15,18 +15,18 @@
   </mat-toolbar> -->
   <mat-toolbar color="warn">
     <div style="margin-right: auto;" class="example-spacer">
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="openLinkedInProfile()">
         <i class="fa-brands fa-linkedin "></i>
       </button>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="openGithubProfile()" >
         <i class="fa-brands fa-github "></i>
       </button>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="enviarCorreo()">
         <i class="fa-regular fa-envelope "></i>
       </button>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+<!--       <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
         <i class="fa-brands fa-instagram "></i>
-      </button>
+      </button> -->
     </div>
     <div style="margin-left: auto;"  >
       <app-navbar></app-navbar>
