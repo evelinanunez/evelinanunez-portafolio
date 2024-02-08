@@ -21,6 +21,14 @@ import { DashboardPortafolioComponent } from "./dashboard-portafolio.component";
           {
             path: 'portafolio',
             loadChildren:()=> import('./pages/portafolio/portafolio.module').then((m)=>m.PortafolioModule)
+          },
+          {
+            path: 'contact',
+            loadChildren:()=> import('./pages/contact/contact.module').then((m)=>m.ContactModule)
+          },
+          {
+            path: '**',
+            redirectTo: 'home',
           }
         ]
       }

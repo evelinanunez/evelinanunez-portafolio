@@ -1,18 +1,4 @@
-<!--   <mat-toolbar color="warn">
-        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-          <i class="fa-brands fa-linkedin"></i>
-        </button>
-        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-          <i class="fa-brands fa-github"></i>
-        </button>
-        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-          <i class="fa-regular fa-envelope"></i>
-        </button>
-        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-          <i class="fa-brands fa-instagram"></i>
-        </button>
-    <app-navbar></app-navbar>
-  </mat-toolbar> -->
+
   <mat-toolbar color="warn">
     <div style="margin-right: auto;" class="example-spacer">
       <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="openLinkedInProfile()">
@@ -28,9 +14,19 @@
         <i class="fa-brands fa-instagram "></i>
       </button> -->
     </div>
-    <div style="margin-left: auto;"  >
-      <app-navbar></app-navbar>
+    <div>
+      <button
+        (click)="toggleSidebar.emit()"
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
     </div>
+<!--     <div style="margin-left: auto;"  >
+      <app-navbar></app-navbar>
+    </div> -->
   </mat-toolbar>
 
 

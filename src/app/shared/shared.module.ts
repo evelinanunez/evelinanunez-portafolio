@@ -6,16 +6,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MenuComponent } from './menu/menu.component';
 import { MatMenuModule } from '@angular/material/menu';
-import { NavbarComponent } from './navbar/navbar.component';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     ToolbarComponent,
     MenuComponent,
-    NavbarComponent
+    SidebarComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +27,8 @@ import { RouterModule } from '@angular/router';
     MatButtonModule,
     MatMenuModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    MatSidenavModule
   ],
   exports:[
     ToolbarComponent,
@@ -33,7 +37,10 @@ import { RouterModule } from '@angular/router';
     MenuComponent,
     MatMenuModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    SidebarComponent,
+    MatSidenavModule,
+    FooterComponent
   ]
 })
 export class SharedModule { }

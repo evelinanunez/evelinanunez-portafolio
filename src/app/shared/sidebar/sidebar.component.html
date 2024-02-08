@@ -1,0 +1,40 @@
+<mat-nav-list>
+
+  <mat-list-item
+
+  routerLink ="home"
+  routerLinkActive
+  #principalLink = "routerLinkActive"
+  [activated]="principalLink.isActive"
+  mat-button color="primary"
+  >
+  <a>Principal</a>
+
+  </mat-list-item>
+  <mat-list-item
+  routerLink ="about-me"
+  routerLinkActive
+  #aboutMeLink = "routerLinkActive"
+  [activated]="aboutMeLink.isActive"
+  >
+    <a>Sobre mi</a>
+  </mat-list-item>
+  <mat-list-item
+
+  routerLink ="portafolio"
+  routerLinkActive
+  #portafolioLink = "routerLinkActive"
+  [activated]="portafolioLink.isActive"
+  >
+  <a>Portafolio</a>
+  </mat-list-item>
+  <mat-list-item
+  routerLink ="contact"
+  routerLinkActive
+  #contactLink = "routerLinkActive"
+  [activated]="contactLink.isActive"
+  >
+    <a>Contacto</a>
+  </mat-list-item>
+</mat-nav-list>
+
