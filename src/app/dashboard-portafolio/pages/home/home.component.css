@@ -7,3 +7,12 @@ p{
   font-size: 1.5rem;
   margin-bottom: 5rem;
 }
+@media (max-width: 576px) {
+  /* Cambiar el tamaño del h1 en dispositivos móviles */
+  h1 {
+    font-size: 2rem; /* Tamaño de fuente deseado para dispositivos móviles */
+  }
+  p{
+    font-size: 1rem;
+  }
+}
