@@ -11,8 +11,11 @@ import { RouterModule } from '@angular/router';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { FooterComponent } from './footer/footer.component';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
     ToolbarComponent,
@@ -28,11 +31,15 @@ import { FooterComponent } from './footer/footer.component';
     MatMenuModule,
     MatListModule,
     RouterModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatInputModule,
+
   ],
-  exports:[
+  exports: [
     ToolbarComponent,
-    MatButtonModule,
     MatButtonModule,
     MenuComponent,
     MatMenuModule,
@@ -40,7 +47,14 @@ import { FooterComponent } from './footer/footer.component';
     RouterModule,
     SidebarComponent,
     MatSidenavModule,
-    FooterComponent
-  ]
+    FooterComponent,
+    MatIconModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatInputModule,
+    MatCardModule,
+  ],
+
 })
 export class SharedModule { }

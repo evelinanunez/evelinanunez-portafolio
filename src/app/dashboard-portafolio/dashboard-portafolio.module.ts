@@ -11,7 +11,7 @@ import { DashboardPortafolioRoutingModule } from './dashboard-portafolio-routing
 @NgModule({
   declarations: [
     DashboardPortafolioComponent,
-    HomeComponent
+    //HomeComponent
   ],
   imports: [
     CommonModule,

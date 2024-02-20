@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ContactComponent } from './contact.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ContactRoutingModule } from './contact-routing-module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -13,7 +15,12 @@ import { ContactRoutingModule } from './contact-routing-module';
   imports: [
     CommonModule,
     SharedModule,
-    ContactRoutingModule
+    ContactRoutingModule,
+/*     MatFormFieldModule,
+    MatInputModule */
+  ],
+  exports:[
+    ContactComponent,
   ]
 })
 export class ContactModule { }

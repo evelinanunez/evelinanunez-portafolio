@@ -1,1 +1,54 @@
-<p>contact works!</p>
+<div class="m-auto my-5" >
+  <h1 class="text-center">Contactame! </h1>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmitContact()">
+    <div class="row justify-content-center">
+      <div class="col-6 col-sm-3">
+        <mat-form-field class="w-100">
+          <mat-label>Nombre: </mat-label>
+          <input matInput formControlName="name"/>
+          <mat-error>
+            <span></span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-6 col-sm-3">
+        <mat-form-field class="w-100">
+          <mat-label>Apellido: </mat-label>
+          <input matInput formControlName="lastName"/>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-6">
+        <mat-form-field class="w-100">
+          <mat-label>Email: </mat-label>
+          <input  matInput formControlName="email"/>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-6">
+        <mat-form-field class="w-100">
+          <mat-label>Escribe un mensaje: </mat-label>
+          <textarea matInput formControlName="message" rows="5" style="min-height: 100px;" maxlength="200">    </textarea>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-2">
+        <button  mat-raised-button color="warn" class="w-100">Enviar</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="row justify-content-center">
+  <div class="col-12 col-sm-6" >
+    <mat-card appearance="outlined" align="center">
+      <mat-card-content>El Mensaje se envió correctamente</mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+
+
+
