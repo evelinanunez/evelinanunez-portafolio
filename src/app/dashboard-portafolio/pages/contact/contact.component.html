@@ -1,11 +1,11 @@
 <div class="m-auto my-5" >
   <h1 class="text-center">Contactame! </h1>
-  <form [formGroup]="contactForm" (ngSubmit)="onSubmitContact()" netlify>
+  <form [formGroup]="contactForm" data-netlify="true" name="contact" method="POST">
     <div class="row justify-content-center">
       <div class="col-6 col-sm-3">
         <mat-form-field class="w-100">
           <mat-label>Nombre: </mat-label>
-          <input matInput formControlName="name"/>
+          <input matInput formControlName="name" type="text" name="name" />
           <mat-error>
             <span></span>
           </mat-error>
@@ -14,7 +14,7 @@
       <div class="col-6 col-sm-3">
         <mat-form-field class="w-100">
           <mat-label>Apellido: </mat-label>
-          <input matInput formControlName="lastName"/>
+          <input matInput formControlName="lastName" type="text" name="lastName" />
         </mat-form-field>
       </div>
     </div>
@@ -22,7 +22,7 @@
       <div class="col-12 col-sm-6">
         <mat-form-field class="w-100">
           <mat-label>Email: </mat-label>
-          <input  matInput formControlName="email"/>
+          <input  matInput formControlName="email" type="email" name="email" />
         </mat-form-field>
       </div>
     </div>
@@ -30,35 +30,38 @@
       <div class="col-12 col-sm-6">
         <mat-form-field class="w-100">
           <mat-label>Escribe un mensaje: </mat-label>
-          <textarea matInput formControlName="message" rows="5" style="min-height: 100px;" maxlength="200">    </textarea>
+          <textarea matInput formControlName="message"  name="message" rows="5" style="min-height: 100px;" maxlength="200">    </textarea>
         </mat-form-field>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-2">
-        <button  mat-raised-button color="warn" class="w-100">Enviar</button>
+        <button  mat-raised-button color="warn" type="submit" class="w-100">Enviar</button>
       </div>
     </div>
   </form>
 </div>
-<div class="row justify-content-center">
+<!-- <div class="row justify-content-center">
   <div class="col-12 col-sm-6" >
     <mat-card appearance="outlined" align="center">
       <mat-card-content>El Mensaje se envió correctamente</mat-card-content>
     </mat-card>
   </div>
-</div>
+</div> -->
 
-<form name="contact" netlify>
+
+<form name="contact" method="POST" data-netlify="true">
   <p>
-    <label>Name <input type="text" name="name" /></label>
+    <label>Your Name: <input type="text" name="name" /></label>
   </p>
   <p>
-    <label>Email <input type="email" name="email" /></label>
+    <label>Your Email: <input type="email" name="email" /></label>
   </p>
   <p>
-    <button type="submit">Send</button>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Enviar</button>
   </p>
 </form>
-
 
