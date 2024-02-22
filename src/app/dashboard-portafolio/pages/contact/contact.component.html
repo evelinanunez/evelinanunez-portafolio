@@ -3,13 +3,15 @@
   <form [formGroup]="contactForm"
   name="contact"
   method="POST"
+  (ngSubmit)="onSubmitContact($event)"
   netlify
 >
+<input type="hidden" name="form-name" value="contact" />
     <div class="row justify-content-center">
       <div class="col-6 col-sm-3">
         <mat-form-field class="w-100">
           <mat-label>Nombre: </mat-label>
-          <input matInput formControlName="name" type="text" name="name" />
+          <input matInput formControlName="name" type="text" name="name" id="name" />
           <mat-error>
             <span></span>
           </mat-error>
@@ -18,7 +20,7 @@
       <div class="col-6 col-sm-3">
         <mat-form-field class="w-100">
           <mat-label>Apellido: </mat-label>
-          <input matInput formControlName="lastName" type="text" name="lastName" />
+          <input matInput formControlName="lastName" type="text" name="lastName" id="lastName" />
         </mat-form-field>
       </div>
     </div>
@@ -26,7 +28,7 @@
       <div class="col-12 col-sm-6">
         <mat-form-field class="w-100">
           <mat-label>Email: </mat-label>
-          <input  matInput formControlName="email" type="email" name="email" />
+          <input  matInput formControlName="email" type="email" name="email" id="email" />
         </mat-form-field>
       </div>
     </div>
@@ -34,7 +36,7 @@
       <div class="col-12 col-sm-6">
         <mat-form-field class="w-100">
           <mat-label>Escribe un mensaje: </mat-label>
-          <textarea matInput formControlName="message"  name="message" rows="5" style="min-height: 100px;" maxlength="200">    </textarea>
+          <textarea matInput formControlName="message"  name="message" id="message"  rows="5" style="min-height: 100px;" maxlength="200">    </textarea>
         </mat-form-field>
       </div>
     </div>
