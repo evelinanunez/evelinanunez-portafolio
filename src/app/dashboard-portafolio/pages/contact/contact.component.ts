@@ -18,18 +18,15 @@ export class ContactComponent {
     private http : HttpClient
   ){
     this.contactForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      lastName:[''],
+      name: ['', [Validators.required, Validators.minLength(5)] ],
+      lastName:['',Validators.minLength(5)],
       email:['',[Validators.required, Validators.email]],
-      message: ['',Validators.required]
+      message: ['',Validators.required],
     })
   }
 
 
   onSubmitContact(ev : SubmitEvent){
-  /*   alert('Se solicito contacto.')
-    console.log(this.contactForm.value);
-    console.log(ev); */
     const formData = this.contactForm.value;
     formData['form-name'] = 'contact';
     const headers = new HttpHeaders({
@@ -42,21 +39,5 @@ export class ContactComponent {
         this.isContactFormSubmitted = true;
       });
   }
- /*  onSubmit(evt: SubmitEvent) {
-    //evt.preventDefault();
 
-    const formData = this.contactForm.value;
-    // This is important. We need to add the hidden field to make sure Netlify picks up the form submission.
-    formData['form-name'] = 'contact';
-    const headers = new HttpHeaders({
-      Accept: 'text/html',
-      'Content-Type': 'application/x-www-form-urlencoded',
-    });
-
-    this.http
-      .post('/', new URLSearchParams(formData).toString(), { headers, responseType: 'text' })
-      .subscribe(() => {
-        this.isContactFormSubmitted = true;
-      });
-  } */
 }

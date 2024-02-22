@@ -10,7 +10,9 @@
   method="POST"
   (ngSubmit)="onSubmitContact($event)"
   netlify
+  data-netlify-recaptcha="true"
 >
+
 <input type="hidden" name="form-name" value="contact" />
     <div class="row justify-content-center">
       <div class="col-6 col-sm-3">
@@ -18,7 +20,12 @@
           <mat-label>Nombre: </mat-label>
           <input matInput formControlName="name" type="text" name="name" id="name" />
           <mat-error>
-            <span></span>
+            <ng-container *ngIf="contactForm.get('name')?.hasError('required')">
+              Campo requerido.
+            </ng-container>
+            <ng-container *ngIf="contactForm.get('name')?.hasError('minlength')">
+              Minimo 5 caracteres.
+            </ng-container>
           </mat-error>
         </mat-form-field>
       </div>
@@ -26,6 +33,11 @@
         <mat-form-field class="w-100">
           <mat-label>Apellido: </mat-label>
           <input matInput formControlName="lastName" type="text" name="lastName" id="lastName" />
+          <mat-error>
+            <ng-container *ngIf="contactForm.get('name')?.hasError('minlength')">
+              Minimo 5 caracteres.
+            </ng-container>
+          </mat-error>
         </mat-form-field>
       </div>
     </div>
@@ -34,6 +46,14 @@
         <mat-form-field class="w-100">
           <mat-label>Email: </mat-label>
           <input  matInput formControlName="email" type="email" name="email" id="email" />
+          <mat-error>
+            <ng-container *ngIf="contactForm.get('email')?.hasError('required')">
+              Campo requerido.
+            </ng-container>
+            <ng-container *ngIf="contactForm.get('email')?.hasError('email')">
+              Formato mail incorrecto.
+            </ng-container>
+          </mat-error>
         </mat-form-field>
       </div>
     </div>
@@ -41,8 +61,19 @@
       <div class="col-12 col-sm-6">
         <mat-form-field class="w-100">
           <mat-label>Escribe un mensaje: </mat-label>
-          <textarea matInput formControlName="message"  name="message" id="message"  rows="5" style="min-height: 100px;" maxlength="200">    </textarea>
+          <textarea matInput formControlName="message"  name="message" id="message"  rows="5" style="min-height: 100px;" maxlength="200">
+          </textarea>
+          <mat-error>
+            <ng-container *ngIf="contactForm.get('message')?.hasError('required')">
+              Campo requerido.
+            </ng-container>
+          </mat-error>
         </mat-form-field>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-6">
+        <div data-netlify-recaptcha="true"></div>
       </div>
     </div>
     <div class="row justify-content-center">
