@@ -1,6 +1,11 @@
+<div *ngIf="isContactFormSubmitted">
+  ¡Mensaje Enviado! Muchas gracias por contartarte, en breve me estoy comunicando con vos.
+  </div>
 <div class="m-auto my-5" >
   <h1 class="text-center">Contactame! </h1>
-  <form [formGroup]="contactForm"
+  <form
+  *ngIf="!isContactFormSubmitted"
+  [formGroup]="contactForm"
   name="contact"
   method="POST"
   (ngSubmit)="onSubmitContact($event)"
@@ -42,7 +47,12 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-2">
-        <button  mat-raised-button color="warn" type="submit" class="w-100">Enviar</button>
+        <button
+        mat-raised-button
+        color="warn"
+        type="submit"
+        [disabled]="!contactForm.valid"
+        class="w-100">Enviar</button>
       </div>
     </div>
   </form>

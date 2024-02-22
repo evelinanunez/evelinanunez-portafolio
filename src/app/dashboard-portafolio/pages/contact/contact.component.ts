@@ -27,9 +27,9 @@ export class ContactComponent {
 
 
   onSubmitContact(ev : SubmitEvent){
-    alert('Se solicito contacto.')
+  /*   alert('Se solicito contacto.')
     console.log(this.contactForm.value);
-    console.log(ev);
+    console.log(ev); */
     const formData = this.contactForm.value;
     formData['form-name'] = 'contact';
     const headers = new HttpHeaders({
