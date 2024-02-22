@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   title= 'Full Stack Developer';
+  titleTecnologias = 'Tecnologías que manejo'
 }
