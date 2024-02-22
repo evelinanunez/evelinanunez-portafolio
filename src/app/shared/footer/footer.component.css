@@ -2,3 +2,7 @@
   height: var(--footer-height);
   text-align: center;
 }
+
+footer{
+  background-color: #f44336;
+}
