@@ -27,6 +27,10 @@ import { DashboardPortafolioComponent } from "./dashboard-portafolio.component";
             loadChildren:()=> import('./pages/contact/contact.module').then((m)=>m.ContactModule)
           },
           {
+            path: 'technologies',
+            loadChildren:()=> import('./pages/technologies/technologies.module').then((m)=>m.TechnologiesModule)
+          },
+          {
             path: '**',
             redirectTo: 'home',
           }

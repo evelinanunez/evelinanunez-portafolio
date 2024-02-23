@@ -29,6 +29,14 @@
   <a>Portafolio</a>
   </mat-list-item>
   <mat-list-item
+  routerLink ="technologies"
+  routerLinkActive
+  #technologiesLink = "routerLinkActive"
+  [activated]="technologiesLink.isActive"
+  >
+    <a>Tecnologías</a>
+  </mat-list-item>
+  <mat-list-item
   routerLink ="contact"
   routerLinkActive
   #contactLink = "routerLinkActive"
