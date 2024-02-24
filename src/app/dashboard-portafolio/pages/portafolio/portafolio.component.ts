@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class PortafolioComponent {
 
+
+
+  proyectoCalculadoraEve() : void  {
+    window.open('https://calculadora-evelina.netlify.app', '_blank');
+  }
 }

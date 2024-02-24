@@ -11,3 +11,13 @@
   background-image: url('../../../../assets/imagenes/angular.png');
   background-size: cover;
 }
+
+.javascript-image{
+  background-image: url('../../../../assets/imagenes/JavaScript.png');
+  background-size: cover;
+}
+
+img{
+  max-width: 400px;
+  height: 200px;
+}

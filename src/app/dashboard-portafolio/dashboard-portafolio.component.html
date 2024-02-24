@@ -9,10 +9,12 @@
   </mat-drawer>
   <div class="example-sidenav-content">
     <app-toolbar (click)="mostrarSidebar= !mostrarSidebar"></app-toolbar>
-    <main style="padding: 2rem" (click)="mostrarSidebar= !mostrarSidebar">
+    <main style="max-height: 100vh;">
         <router-outlet></router-outlet>
+        <!-- <app-footer style="margin-bottom: auto;"></app-footer> -->
+
     </main>
-    <app-footer style="margin-top: auto;"></app-footer>
+
   </div>
 </mat-drawer-container>
 <!-- <app-footer></app-footer> -->

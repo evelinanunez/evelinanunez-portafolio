@@ -1,26 +1,57 @@
-<div class="container-fluid mt-5">
-  <div class="m-auto p-3">
-    <h1 class="text-center">MIS PROYECTOS</h1>
+<div class="m-auto my-5">
+  <div class="text-center p-5">
+    <h1 >MIS PROYECTOS</h1>
   </div>
-  <mat-card class="example-card">
-    <mat-card-header style="display: inline-flex;">
-      <div mat-card-avatar class="angular-image"></div>
-      <mat-card-title>Aplicación administración de cursos</mat-card-title>
-      <mat-card-subtitle>Desarrollado con Angular - Curso CoderHouse - sep 23 a nov 23</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="assets/imagenes/homeCursoAngular.png" alt="Photo of a Shiba Inu">
-    <mat-card-content style="display: inline-block;">
-      <p>
-      Aplicación creada en angular para incorporar los conocimientos de componentes y elementos de un proyecto de Angular, modulos , interpolación, directivas, comunicación entre componentes, reactive forms, angular material, pipes y directivas personalizas. Se aplico Lazy Loading de modulos y Guards, router, llamadas a API REST y se aplico un poco de patrón de diseño Redux con NgRx.
-      </p>
-      <p>
-        <a href="https://www.coderhouse.com/online/angular" target="_blank">Link Curso Angular Coderhouse</a>
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>IR A LA WEB</button>
-      <!-- <button mat-button>SHARE</button> -->
-    </mat-card-actions>
-  </mat-card>
+  <div class="container m-auto">
+    <div class="row" >
+      <div class="col-12 col-md-4 p-2">
+        <mat-card class="example-card">
+          <mat-card-header style="display: inline-flex;height:120px;">
+            <div mat-card-avatar class="angular-image"></div>
+            <mat-card-title>Aplicación administración de cursos</mat-card-title>
+            <mat-card-subtitle>Desarrollado con Angular - Curso CoderHouse - sep 23 a nov 23</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="assets/imagenes/homeCursoAngular.png"  alt="Photo of a Shiba Inu">
+          <mat-card-content style="display: inline-block;">
+   <!--          <p>
+            Aplicación creada en angular para incorporar los conocimientos de componentes y elementos de un proyecto de Angular, modulos , interpolación, directivas, comunicación entre componentes, reactive forms, angular material, pipes y directivas personalizas. Se aplico Lazy Loading de modulos y Guards, router, llamadas a API REST y se aplico un poco de patrón de diseño Redux con NgRx.
+            </p>
+            <p>
+              <a href="https://www.coderhouse.com/online/angular" target="_blank">Link Curso Angular Coderhouse</a>
+            </p> -->
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button disabled>IR A LA WEB</button>
+            <!-- <button mat-button>SHARE</button> -->
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="col-12 col-md-4 p-2">
+        <mat-card class="example-card">
+          <mat-card-header style="display: inline-flex;height:120px;">
+            <div mat-card-avatar class="javascript-image"></div>
+            <mat-card-title >Calculadora</mat-card-title>
+            <mat-card-subtitle >Hecha con Javascript - css </mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="assets/imagenes/calculadora-evelina.png" alt="Foto del proyecto calculadora">
+          <mat-card-content style="display: inline-block;">
+  <!--           <p>
+            Aplicación creada en angular para incorporar los conocimientos de componentes y elementos de un proyecto de Angular, modulos , interpolación, directivas, comunicación entre componentes, reactive forms, angular material, pipes y directivas personalizas. Se aplico Lazy Loading de modulos y Guards, router, llamadas a API REST y se aplico un poco de patrón de diseño Redux con NgRx.
+            </p>
+            <p>
+              <a href="https://www.coderhouse.com/online/angular" target="_blank">Link Curso Angular Coderhouse</a>
+            </p> -->
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button  (click)="proyectoCalculadoraEve()">IR A LA WEB</button>
+            <!-- <button mat-button>SHARE</button> -->
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="col-12 col-md-4 p-2">
 
+      </div>
+    </div>
+  </div>
 </div>
+
