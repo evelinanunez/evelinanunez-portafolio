@@ -1,98 +1,97 @@
 
 <div class="m-auto my-5" >
-  <div class="text-center p-5">
-    <img style="max-width: 100%; max-height: 300px;" class="img-fluid mt-3 mt-md-0 " src="assets/imagenes/logoEveSinFondo.png">
-    <h1 class="text-center">CONTACTAME </h1>
+  <div class="container text-center" >
+    <!-- <img style="max-width: 100%; max-height: 300px;" class="img-fluid mt-3 mt-md-0 " src="assets/imagenes/logoEveSinFondo.png"> -->
+    <h1 class="text-center p-5">CONTACTAME </h1>
   </div>
 
-  <div *ngIf="isContactFormSubmitted">
-    <p>
-      <mat-icon>favorite</mat-icon> ¡Mensaje Enviado! Muchas gracias por contartarte, en breve me estoy comunicando con vos.
-    </p>
-  </div>
-  <form
-  *ngIf="!isContactFormSubmitted"
-  [formGroup]="contactForm"
-  name="contact"
-  method="POST"
-  (ngSubmit)="onSubmitContact($event)"
-  netlify
->
+  <div *ngIf="isContactFormSubmitted" >
+    <h1 class="mt-5">¡Mensaje Enviado!</h1>
 
-<input type="hidden" name="form-name" value="contact" />
-    <div class="row justify-content-center">
-      <div class="col-6 col-sm-3">
-        <mat-form-field class="w-100">
-          <mat-label>Nombre: </mat-label>
-          <input matInput formControlName="name" type="text" name="name" id="name" />
-          <mat-error>
-            <ng-container *ngIf="contactForm.get('name')?.hasError('required')">
-              Campo requerido.
-            </ng-container>
-            <ng-container *ngIf="contactForm.get('name')?.hasError('minlength')">
-              Minimo 5 caracteres.
-            </ng-container>
-          </mat-error>
-        </mat-form-field>
-      </div>
-      <div class="col-6 col-sm-3">
-        <mat-form-field class="w-100">
-          <mat-label>Apellido: </mat-label>
-          <input matInput formControlName="lastName" type="text" name="lastName" id="lastName" />
-          <mat-error>
-            <ng-container *ngIf="contactForm.get('name')?.hasError('minlength')">
-              Minimo 5 caracteres.
-            </ng-container>
-          </mat-error>
-        </mat-form-field>
-      </div>
+    <div class="alert alert-success mt-3" role="alert">
+      <mat-icon>favorite</mat-icon> ¡Gracias por contactarme! en breve me estaré comunicando con vos.
     </div>
-    <div class="row justify-content-center">
-      <div class="col-12 col-sm-6">
-        <mat-form-field class="w-100">
-          <mat-label>Email: </mat-label>
-          <input  matInput formControlName="email" type="email" name="email" id="email" />
-          <mat-error>
-            <ng-container *ngIf="contactForm.get('email')?.hasError('required')">
-              Campo requerido.
-            </ng-container>
-            <ng-container *ngIf="contactForm.get('email')?.hasError('email')">
-              Formato mail incorrecto.
-            </ng-container>
-          </mat-error>
-        </mat-form-field>
+  </div>
+  <div *ngIf="!isContactFormSubmitted">
+    <form
+    [formGroup]="contactForm"
+    name="contact"
+    method="POST"
+    (ngSubmit)="onSubmitContact($event)"
+    netlify
+  >
+  
+  <input type="hidden" name="form-name" value="contact" />
+      <div class="row justify-content-center">
+        <div class="col-6 col-sm-3">
+          <mat-form-field class="w-100">
+            <mat-label>Nombre: </mat-label>
+            <input matInput formControlName="name" type="text" name="name" id="name" />
+            <mat-error>
+              <ng-container *ngIf="contactForm.get('name')?.hasError('required')">
+                Campo requerido.
+              </ng-container>
+              <ng-container *ngIf="contactForm.get('name')?.hasError('minlength')">
+                Minimo 5 caracteres.
+              </ng-container>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-6 col-sm-3">
+          <mat-form-field class="w-100">
+            <mat-label>Apellido: </mat-label>
+            <input matInput formControlName="lastName" type="text" name="lastName" id="lastName" />
+            <mat-error>
+              <ng-container *ngIf="contactForm.get('name')?.hasError('minlength')">
+                Minimo 5 caracteres.
+              </ng-container>
+            </mat-error>
+          </mat-form-field>
+        </div>
       </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-12 col-sm-6">
-        <mat-form-field class="w-100">
-          <mat-label>Escribe un mensaje: </mat-label>
-          <textarea matInput formControlName="message"  name="message" id="message"  rows="5" style="min-height: 100px;" maxlength="200">
-          </textarea>
-          <mat-error>
-            <ng-container *ngIf="contactForm.get('message')?.hasError('required')">
-              Campo requerido.
-            </ng-container>
-          </mat-error>
-        </mat-form-field>
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-6">
+          <mat-form-field class="w-100">
+            <mat-label>Email: </mat-label>
+            <input  matInput formControlName="email" type="email" name="email" id="email" />
+            <mat-error>
+              <ng-container *ngIf="contactForm.get('email')?.hasError('required')">
+                Campo requerido.
+              </ng-container>
+              <ng-container *ngIf="contactForm.get('email')?.hasError('email')">
+                Formato mail incorrecto.
+              </ng-container>
+            </mat-error>
+          </mat-form-field>
+        </div>
       </div>
-    </div>
-<!--     <div class="row justify-content-center">
-      <div class="col-12 col-sm-6">
-        <div data-netlify-recaptcha="true"></div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-6">
+          <mat-form-field class="w-100">
+            <mat-label>Escribe un mensaje: </mat-label>
+            <textarea matInput formControlName="message"  name="message" id="message"  rows="5" style="min-height: 100px;" maxlength="200">
+            </textarea>
+            <mat-error>
+              <ng-container *ngIf="contactForm.get('message')?.hasError('required')">
+                Campo requerido.
+              </ng-container>
+            </mat-error>
+          </mat-form-field>
+        </div>
       </div>
-    </div> -->
-    <div class="row justify-content-center">
-      <div class="col-2">
-        <button
-        mat-raised-button
-        color="warn"
-        type="submit"
-        [disabled]="!contactForm.valid"
-        class="w-100">Enviar</button>
+      <div class="row justify-content-center">
+        <div class="col-2">
+          <button
+          mat-raised-button
+          color="warn"
+          type="submit"
+          [disabled]="!contactForm.valid"
+          class="w-100">Enviar</button>
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
+ 
 </div>
 
 
