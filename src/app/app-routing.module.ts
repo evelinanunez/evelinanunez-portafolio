@@ -6,13 +6,13 @@ import { HomeComponent } from "./dashboard-portafolio/pages/home/home.component"
 const routes : Routes =[
 
       {
-        path: 'dashboard-portafolio',
+        path: '',
         loadChildren: ()=> import('./dashboard-portafolio/dashboard-portafolio.module').then((m)=>m.DashboardPortafolioModule)
-      },
-      {
+      }
+/*       {
         path:'**',
         redirectTo: 'dashboard-portafolio/home'
-      },
+      }, */
 ]
 @NgModule({
 imports:[RouterModule.forRoot(routes)],
