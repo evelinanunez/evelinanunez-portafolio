@@ -17,6 +17,8 @@ export class PortafolioComponent {
     window.open('https://proyecto-curso-angular-coderhouse.netlify.app', '_blank');
   }
 
-
+  proyectoApiRick(): void  {
+    window.open('https://api-rick-and-morthy.netlify.app', '_blank');
+  }
 
 }

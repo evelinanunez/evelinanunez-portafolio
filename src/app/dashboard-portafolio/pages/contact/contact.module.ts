@@ -16,9 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     SharedModule,
     ContactRoutingModule,
-    HttpClientModule,
-/*     MatFormFieldModule,
-    MatInputModule */
+    HttpClientModule
   ],
   exports:[
     ContactComponent,

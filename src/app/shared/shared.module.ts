@@ -4,7 +4,6 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MenuComponent } from './menu/menu.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
@@ -16,10 +15,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+
+
 @NgModule({
   declarations: [
     ToolbarComponent,
-    MenuComponent,
     SidebarComponent,
     FooterComponent
   ],
@@ -35,13 +35,11 @@ import { MatCardModule } from '@angular/material/card';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatInputModule,
-
+    MatInputModule
   ],
   exports: [
     ToolbarComponent,
     MatButtonModule,
-    MenuComponent,
     MatMenuModule,
     MatListModule,
     RouterModule,
@@ -53,8 +51,8 @@ import { MatCardModule } from '@angular/material/card';
     ReactiveFormsModule,
     MatSelectModule,
     MatInputModule,
-    MatCardModule,
-  ],
+    MatCardModule
+  ]
 
 })
 export class SharedModule { }

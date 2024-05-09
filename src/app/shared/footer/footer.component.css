@@ -1,9 +1,15 @@
 
 
 footer{
-  background-color: #d8f8e1;
+  background-color: #fdcae1;
   text-align: center;
    position: fixed;
   bottom: 0;
   width: 100%;
+
+}
+
+p{
+  margin: 0;
+  padding: 0;
 }
