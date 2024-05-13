@@ -8,11 +8,11 @@ const routes : Routes =[
       {
         path: '',
         loadChildren: ()=> import('./dashboard-portafolio/dashboard-portafolio.module').then((m)=>m.DashboardPortafolioModule)
-      }
-/*       {
+      },
+     {
         path:'**',
-        redirectTo: 'dashboard-portafolio/home'
-      }, */
+        redirectTo: 'home'
+      }, 
 ]
 @NgModule({
 imports:[RouterModule.forRoot(routes)],

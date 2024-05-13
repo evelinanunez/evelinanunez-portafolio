@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent {
+  openCertificado(url : string ): void {
+    // Reemplaza 'URL_DE_TU_PERFIL' con la URL externa de tu perfil de LinkedIn
+    window.open(url, '_blank');
+  }
 
 
 }

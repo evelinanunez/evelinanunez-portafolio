@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   title= 'Full Stack Developer';
   titleTecnologias = 'Tecnologías que manejo'
+
+  openCertificado(url : string ): void {
+    // Reemplaza 'URL_DE_TU_PERFIL' con la URL externa de tu perfil de LinkedIn
+    window.open('https://github.com/evelinanunez', '_blank');
+  }
+
+
+
 }
