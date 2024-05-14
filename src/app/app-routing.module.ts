@@ -8,14 +8,10 @@ const routes : Routes =[
       {
         path: '',
         loadChildren: ()=> import('./dashboard-portafolio/dashboard-portafolio.module').then((m)=>m.DashboardPortafolioModule)
-      },
-     {
-        path:'**',
-        redirectTo: 'home'
-      }, 
+      }
 ]
 @NgModule({
-imports:[RouterModule.forRoot(routes)],
+imports:[RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
 exports:[RouterModule]
 })
 export class AppRoutingModule{}
