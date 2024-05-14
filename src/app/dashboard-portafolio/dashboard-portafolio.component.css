@@ -1,20 +1,23 @@
 .example-container {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .example-sidenav-content {
-  height: 100%;
+  /* height: 100%; */
 }
 
 .example-sidenav {
   padding: 20px;
+  position: fixed;
+  top: 0;
 }
 
 
 .router-container {
   padding-top: 50px; /* Ajusta el valor según la altura del toolbar */
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  overflow-y: auto; /* Ajusta el desplazamiento vertical si es necesario */
+}
+
+
+main {
+  min-height: calc(100vh - 5rem); /* 5rem es el alto del toolbar; habria que considerar colocar el alto del toolbar en una variable CSS para establecerlo globalmente */
 }
