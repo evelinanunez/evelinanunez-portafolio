@@ -11,11 +11,11 @@
     <app-sidebar (click)="mostrarSidebar= !mostrarSidebar"></app-sidebar>
     </mat-drawer>
     <div class="example-sidenav-content" >
-      <app-toolbar class="fixed-top" (click)="mostrarSidebar= !mostrarSidebar"></app-toolbar>
       <main>
+      <app-toolbar class="fixed-top" (click)="mostrarSidebar= !mostrarSidebar"></app-toolbar>
         <router-outlet ></router-outlet>
-      </main>
       <app-footer></app-footer>
+      </main>
     </div>
   </mat-drawer-container>
 
