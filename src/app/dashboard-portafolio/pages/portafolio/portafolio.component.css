@@ -17,6 +17,10 @@
   background-size: cover;
 }
 
+.net-image{
+  background-image: url('../../../../assets/imagenes/net8.png');
+  background-size: cover;
+}
 img{
   max-width: 400px;
   height: 200px;

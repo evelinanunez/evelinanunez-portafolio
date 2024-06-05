@@ -1,0 +1,5 @@
+@media only screen and (max-width: 768px){
+    mat-card-content div img{
+        max-width: 20px;
+    }
+}
