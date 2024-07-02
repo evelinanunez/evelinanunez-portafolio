@@ -1,120 +1,27 @@
 <div class="m-auto my-5">
-
   <div class="container m-auto align-item-center">
     <div class="text-center p-5">
-      <h1 >MIS PROYECTOS</h1>
+      <h1>MIS PROYECTOS</h1>
     </div>
-    <div class="row justify-content-md-center" >
-      <div class="col-12  col-md-4 p-2">
+    <div class="row justify-content-md-center">
+      <div *ngFor="let proyecto of proyectos" class="col-12 col-md-4 p-2">
         <mat-card class="example-card h-100">
           <mat-card-header style="display: inline-flex;height:120px;">
-            <div mat-card-avatar class="angular-image"></div>
-            <mat-card-title>App administrador de cursos</mat-card-title>
-            <mat-card-subtitle>Angular v.16 - Curso CoderHouse</mat-card-subtitle>
+            <div mat-card-avatar class="{{proyecto.imagenCard}}"></div>
+            <mat-card-title>{{ proyecto.titulo }}</mat-card-title>
+            <mat-card-subtitle>{{ proyecto.subtitulo }}</mat-card-subtitle>
           </mat-card-header>
-          <img mat-card-image src="assets/imagenes/homeCursoAngular.png"  alt="Photo of a Shiba Inu">
+          <img mat-card-image [src]="proyecto.imagen" alt="Imagen del proyecto">
           <mat-card-content style="display: inline-block;margin: auto;">
-            <P>FECHA: NOVIEMBRE 2023</P>
-            <p>Api Json-Server publicado en render: <a href="https://api-json-server-fq9l.onrender.com/" target="_blank">link_api</a>
-              <br>
-              Usuario de prueba:
-              email:eve@gmail.com
-              contraseña: 1234
-            </p>
-            <p>Implementación hosting gratuito Netlify</p>
+            <p>FECHA: {{ proyecto.fecha }}</p>
+            <p [innerHTML]="proyecto.descripcion"></p>
           </mat-card-content>
           <mat-card-actions>
-            <button mat-button (click)="proyectoCursoCoderHouseEve()">IR A LA WEB</button>
-            <button mat-button (click)="proyectoCursoCoderHouseEveGithub()">IR A GITHUB</button>
-            <!-- <button mat-button>SHARE</button> -->
-          </mat-card-actions>
-        </mat-card>
-      </div>
-      <div class="col-12  col-md-4 p-2">
-        <mat-card class="example-card h-100" >
-          <mat-card-header style="display: inline-flex;height:120px;">
-            <div mat-card-avatar class="javascript-image"></div>
-            <mat-card-title >Calculadora</mat-card-title>
-            <mat-card-subtitle >Hecha con Javascript vainilla - css puro </mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image src="assets/imagenes/calculadora-evelina.png" alt="Foto del proyecto calculadora">
-          <mat-card-content style="display: inline-block;margin: auto;">
-            <P>FECHA: FEBRERO 2024</P>
-            <P>
-              Se aplica conocimientos basicos de Javascript.
-            </P>
-            <p>Implementación hosting gratuito Netlify</p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button  (click)="proyectoCalculadoraEve()">IR A LA WEB</button>
-            <button mat-button  (click)="proyectoCalculadoraEveGitHub()">IR A GITHUB</button>
-          </mat-card-actions>
-        </mat-card>
-      </div>
-      <div class="col-12 col-md-4 p-2">
-        <mat-card class="example-card h-100" >
-          <mat-card-header style="display: inline-flex;height:120px;">
-            <div mat-card-avatar class="angular-image"></div>
-            <mat-card-title >Consumo de Api pública</mat-card-title>
-            <mat-card-subtitle > Angular v.16</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image src="assets/imagenes/proyecto_apiRest_rick_and_morthy1.png" alt="Foto del proyecto calculadora">
-          <mat-card-content style="display: inline-block;margin: auto;">
-          <P>FECHA: FEBRERO 2024</P>
-          <P>
-            Aplicación basica desarrollada en angular v.16, se utilizo componentes de Angular material y solamente lo generé para demostrar el consumo  y lectura de documentación de api pública.
-          </P>
-          <p>Implementación hosting gratuito Netlify</p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button  (click)="proyectoApiRick()">IR A LA WEB</button>
-            <button mat-button  (click)="proyectoApiRickGithub()">IR A GITHUB</button>
-          </mat-card-actions>
-        </mat-card>
-      </div>
-      <div class="col-12 col-md-4 p-2">
-        <mat-card class="example-card h-100" >
-          <mat-card-header style="display: inline-flex;height:120px;">
-            <div mat-card-avatar class="javascript-image"></div>
-            <mat-card-title >Pagina de Ecommerce</mat-card-title>
-            <mat-card-subtitle > JavaScript Vainilla - Curso CoderHouse</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image src="assets/imagenes/web_construction.png" alt="Foto del proyecto calculadora">
-          <mat-card-content style="display: inline-block;margin: auto;">
-            <P>FECHA: JUNIO 2024</P>
-            <P>
-              Estoy desarrollando una página de Ecommerce con JavaScript Vainilla. Manipulación del DOM, eventos, promesas, localStorage,base de datos en  Firebase, programación orientada a objetos y funcional. Uso de librerias como Sweet alert entre otras. A mediados de Junio subo el repositorio y el acceso a la pagina. 
-            </P>
-            <p>Próximamente: Implementación hosting gratuito Netlify</p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button [disabled]="isDisabled">PROXIMAMENTE</button>
-
-          </mat-card-actions>
-        </mat-card>
-      </div>
-      <div class="col-12 col-md-4 p-2">
-        <mat-card class="example-card h-100" >
-          <mat-card-header style="display: inline-flex;height:120px;">
-            <div mat-card-avatar class="net-image"></div>
-            <mat-card-title >Ejemplo de ApiRest</mat-card-title>
-            <mat-card-subtitle > Api de Tareas desarrollado en .NET 8 y Entity Framework</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image src="assets/imagenes/imagen_api.png" alt="Foto del proyecto calculadora">
-          <mat-card-content style="display: inline-block;margin: auto;">
-            <P>FECHA: JUNIO 2024</P>
-            <p>
-            Se aplicaron conceptos basicos de http, controllers, repositorios, servicios, models,dto. Se implemento la versión de .net 8. Es una api simple para poder demostrar manejo basico de la herramienta visual studio. Controlador de versiones Git. Base de datos SQL Server, Entity Framework data base First. Por ahora lo tengo local y voy a implementarlo en Azure Devops próximamente para demostrar conocimientos básicos en el uso de esa herramienta.
-          </p>
-          <p>Próximanente: Implementación plataforma Cloud Azure Devops </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button [disabled]="isDisabled">PROXIMAMENTE</button>
-
+            <button mat-button (click)="abrirLink(proyecto.linkWeb)" [disabled]="proyecto.disabled">IR A LA WEB</button>
+            <button mat-button (click)="abrirLink(proyecto.linkGithub)" [disabled]="proyecto.disabled">IR A GITHUB</button>
           </mat-card-actions>
         </mat-card>
       </div>
     </div>
   </div>
 </div>
-
